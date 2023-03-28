@@ -1,12 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* background-color: #F9F5EB; */
+        }
+
+        #head {
+            width: 100%;
+            height: 100px;
+            align-items: center;
+            padding-top: 10px;
+        }
+        .rogo{
+            width: 400px;
+            height: 100px;
+            font-size: 60px;
+            margin: auto;
+            display: flex;
+        }
+        #body1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        .img {
+            display: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img.on {
+            display: block;
+        }
+        .imgfont{
+            position: fixed;
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+        }
+        .tp{
+            top: 170px;
+            left: 800px;
+        }
+        .md{
+            top: 280px;
+            left: 800px;
+        }
+        .bt{
+            top: 390px;
+            left: 800px;
+        }
+        #bottom{
+            background-color: burlywood;
+            height: 300px;
+        }
+        .bottombar{
+            display: inline-block;
+            margin-left: 90px;
+            margin-top: 20px;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+        a:hover{
+            color: black;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            transition: all .5s linear;
+        }
+        
+    </style>
 </head>
+
 <body>
-    
+    <div>
+        <div id="head">
+            <div class="rogo">
+                VEGETARIAN
+            </div>
+        </div>
+        <div id="body1">
+            <img class="img" src="https://pixabay.com/get/g7b4360870b629210d3187253fe0a4d24ca1c73459a37cf69786aae862d835030975c0854a338ecabb514641134125c30a2d87cd16c79d834ff61c6ad940d0f623ca6a6cb3098a5ea49fdf48bcd124001_1920.jpg">
+            <img class="img" src="https://pixabay.com/get/g5b59089a3408476fd067590343a516b6f5d2003819a90261506cc5c3b2271ecdd207f4191cc2903e86326dee4b199c091f899461833f6d8c33fb7b6d5a62232fdaf1ec852f1e05e6035af57ee2009686_1920.jpg">
+            <img class="img" src="https://pixabay.com/get/g73144b2755a27f34d4b884ab754cf564983e24ba9cbb44bf6fd63776371482dd08eb24c441e13d1068f73ef4b0ca66809b9e532e7ec1f0651407588a7fd64d9886114e2950d31a3165ef270a3188302c_1920.jpg">
+            <div class="imgfont tp">
+                fnsdlkn
+            </div>
+            <div class="imgfont md">
+                fnsdlkn
+            </div>
+            <div class="imgfont bt">
+                fnsdlkn
+            </div>
+        </div>
+        <div id="bottom">
+            <div class="bottombar one"><a href="">회사소개</a></div>
+            <div class="bottombar two"><a href="">제품안내</a></div>
+            <div class="bottombar there"><a href="">다운로드</a></div>
+            <div class="bottombar four"><a href="">고객센터</a></div>
+        </div>
+    </div>
+    <script>
+        const images = document.querySelectorAll('.img');
+        let current = 0;
+
+        function showSlide() {
+            for (let i = 0; i < images.length; i++) {
+                images[i].classList.remove('on');
+            }
+            current++;
+            if (current > images.length) {
+                current = 1;
+            }
+            images[current - 1].classList.add('on');
+            setTimeout(showSlide, 10000);
+        }
+        showSlide();
+    </script>
 </body>
+
 </html>
