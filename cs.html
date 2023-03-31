@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 3000px;
+        }
+
+        .rogo {
+            width: 400px;
+            /* height: 100px; */
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            margin: auto;
+        }
+
+        #Middle {
+            height: 110px;
+            position: relative;
+        }
+
+        .Menubar {
+            width: 1000px;
+            height: 100px;
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .Menubar>li {
+            width: 33%;
+            float: left;
+            text-align: center;
+        }
+
+        .Submenu {
+            overflow: hidden;
+            height: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .Menubar>li:hover {
+            transition-duration: 0.5s;
+        }
+
+        .Menubar>li:hover .Submenu {
+            height: 300px;
+            transition-duration: 1s;
+        }
+
+        .Menubar>li:hover .Menubar {
+            height: 500px;
+            transition-duration: 1s;
+        }
+
+        .solution {
+            background-color: rgba(128, 128, 128, 0.4);
+            /* color: #444; */
+            /* cursor: pointer; */
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 800px;
+            font-size: 15px;
+            font-weight: bold;
+            /* text-align: left; */
+            border: none;
+            /* outline: none; */
+            transition: .5s;
+        }
+
+        .active,
+        .solution:hover {
+            background-color: rgba(128, 128, 128, 0.7);
+        }
+
+        .csbar {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="Middle">
+            <ul class="Menubar">
+                <li><a href="../Project_1/compony.html">회사소개</a>
+                    <ul class="Submenu">
+                        <li><a href="../Project_1/compony.html">회사소개</a></li>
+                        <li><a href="../Project_1/map.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="../Project_1/solution.html">이용방법</a>
+                    <ul class="Submenu">
+                        <li><a href="../Project_1/solution.html">이용방법</a></li>
+                    </ul>
+                </li>-->
+                <li class="rogo">
+                    <ul>
+                        <li><a href="../Project_1/index.html">VEGETARIAN</a></li>
+                    </ul>
+                </li>
+                <!--<li><a href="../Project_1/map.html">오시는길</a>
+                    <ul class="Submenu">
+                        <li><a href="../Project_1/map.html">다운로드</a></li>
+                    </ul>
+                </li> -->
+                <li><a href="../Project_1/cs.html">고객지원</a></li>
+            </ul>
+            </ul>
+        </div>
+        <button class="solution">1:1 상담사가 필요하신가요?</button>
+        <div class="csbar">
+            <form action="">
+                <table class="front">
+                    <tr>
+                        <td>성함</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>연락처</td>
+                        <td><input type="text"> - <input type="text"> - <input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>문의사항</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit">보내기</button></td>
+                        <td><button type="reset">초기화</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <button class="solution">APP 다운로드 방법</button>
+        <div class="csbar">
+            <ul>
+                <li class="QRbt">안드로이드
+                    <ul>
+                        <li><img src="../Project_1/img/QR.png" alt=""></li>
+                    </ul>
+                </li>
+                <li class="QRbt">아이폰
+                    <ul>
+                        <li><img src="../Project_1/img/QR.png" alt=""></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("solution");
+        var i;
+
+        for (i=0; i<acc.length; i++){
+            acc[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+
+            var csbar = this.nextElementSibling;
+            if(panel.style.display === "block"){
+                panel.style.display = "none";
+            }else{
+                panel.style.display = "block"
+            }
+            })
+        }
+    </script>
+</body>
+
+</html>

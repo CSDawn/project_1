@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 2500px;
+            /* background-color: beige; */
+        }
+
+        /* #head {
+            width: 100%;
+            height: 90px;
+        } */
+
+        .rogo {
+            width: 400px;
+            /* height: 100px; */
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            margin: auto;
+        }
+
+        #Middle {
+            /* background-color: burlywood; */
+            height: 110px;
+            position: relative;
+        }
+
+        .Menubar {
+            width: 1000px;
+            height: 100px;
+            font-size: 25px;
+            font-weight: bold;
+            /* background-color: black; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .Menubar>li {
+            width: 33%;
+            float: left;
+            text-align: center;
+        }
+
+        .Submenu {
+            overflow: hidden;
+            height: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .Menubar>li:hover {
+            transition-duration: 0.5s;
+        }
+
+        .Menubar>li:hover .Submenu {
+            height: 300px;
+            transition-duration: 1s;
+        }
+
+        .Menubar>li:hover .Menubar {
+            height: 500px;
+            transition-duration: 1s;
+        }
+
+        #Introduction {
+        }
+        .IntroductionTitle{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            height: 100px;
+            margin-bottom: 70px;
+
+        }
+        .comimgTop img {
+            width: 120px;
+            height: 500px;
+            object-fit: cover;
+        }
+        .comimgTop{
+            display: inline-block;
+            margin-left: 180px;
+        }
+        
+
+        .comTextTop {
+            position: absolute;
+            left: 100px;
+            top: 300px;
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        .comimgMiddle img {
+            width: 700px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .comimgMiddle{
+            display: inline-block;
+            margin-left: 50px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        
+
+        .comTextMiddle {
+            position: absolute;
+            left: 700px;
+            top: 1075px;
+            font-size: 80px;
+            font-weight: bold;
+        }
+        .supermarget{
+            
+        }
+        .supermarget img{
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+            margin-top: 50px;
+            
+        }
+        .comTextBottomOne {
+            position: absolute;
+            left:40%;
+            top: 1800px;
+            font-size: 120px;
+            font-weight: bold;
+            text-align: center;
+            background-color: white;
+            /* color: white; */
+            /* border: 10px solid white; */
+            margin-right: 50px;
+            
+        }
+        .comTextBottomTwo {
+            position: absolute;
+            width: 1000px;
+            left:10%;
+            top: 2300px;
+            font-size: 80px;
+            font-weight: bold;
+            text-align: center;
+            background-color: white;
+            /* color: white; */
+            /* border: 10px solid white; */
+            margin-right: 50px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <div id="head">
+            <div class="rogo">
+                <a href="../Project_1/index.html">VEGETARIAN</a>
+            </div>
+        </div> -->
+        <div id="Middle">
+            <ul class="Menubar">
+                <li><a href="../Project_1/compony.html">회사소개</a>
+                    <ul class="Submenu">
+                        <li><a href="../Project_1/compony.html">회사소개</a></li>
+                        <li><a href="../Project_1/map.html">오시는길</a></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="../Project_1/solution.html">이용방법</a>
+                    <ul class="Submenu">
+                        <li><a href="../Project_1/solution.html">이용방법</a></li>
+                    </ul>
+                </li>-->
+                <li class="rogo">
+                    <ul>
+                        <li><a href="../Project_1/index.html">VEGETARIAN</a></li>
+                    </ul>
+                </li>
+                <!--<li><a href="../Project_1/map.html">오시는길</a>
+                    <ul class="Submenu">
+                        <li><a href="../Project_1/map.html">다운로드</a></li>
+                    </ul>
+                </li> -->
+                <li><a href="../Project_1/cs.html">고객지원</a></li>
+            </ul>
+            </ul>
+        </div>
+        <div id="Introduction">
+            <div class="IntroductionTitle">
+                <p>소 개 합 니 다</p>
+            </div>
+            <div class="comTextTop">
+                느립니다<br>
+                하지만<br>
+                신선합니다
+            </div>
+            <div class="comimgTop">
+                <div class="comimgTop A">
+                    <img src="../Project_1/img/carrots-1508847_1920.jpg" alt="">
+                </div>
+                <div class="comimgTop B">
+                    <img src="../Project_1/img/cucumbers-849269_1920.jpg" alt="">
+                </div>
+                <div class="comimgTop C">
+                    <img src="../Project_1/img/peppers-499068_1920.jpg" alt="">
+                </div>
+            </div>
+            <div class="comimgMiddle">
+                <div class="comimgMiddle A">
+                    <img src="../Project_1/img/cherries-1465801_1920.jpg" alt="">
+                </div>
+                <div class="comimgMiddle B">
+                    <img src="../Project_1/img/bananas-1119790_1920.jpg" alt="">
+                </div>
+                <div class="comimgMiddle C">
+                    <img src="../Project_1/img/blueberries-3460423_1920.jpg" alt="">
+                </div>
+            </div>
+            <div class="comTextMiddle">
+                느립니다<br>
+                하지만<br>
+                신선합니다
+            </div>
+            <div class="comTextBottomOne">
+                V E G E T A R I A N
+            </div>
+            <div class="comTextBottomTwo">
+                The Freshest Week
+            </div>
+            <div class="supermarget">
+                <img src="../Project_1/img/supermarket-949913_1920.jpg" alt="">
+            </div>
+        </div>
+</body>
+
+</html>
