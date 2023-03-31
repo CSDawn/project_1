@@ -12,81 +12,61 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        body {
-            height: 3000px;
-            /* background-color: beige; */
-        }
-
-        /* #head {
-            width: 100%;
-            height: 90px;
-        } */
-
-        .rogo {
-            width: 400px;
-            /* height: 100px; */
-            font-size: 50px;
-            font-weight: bold;
-            text-align: center;
-            margin: auto;
-        }
-
-        #Middle {
-            /* background-color: burlywood; */
-            height: 110px;
-            position: relative;
-        }
-
-        .Menubar {
-            width: 1000px;
-            height: 100px;
-            font-size: 25px;
-            font-weight: bold;
-            /* background-color: black; */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            overflow: hidden;
-        }
-
-        .Menubar>li {
-            width: 33%;
-            float: left;
-            text-align: center;
-        }
-
-        .Submenu {
-            overflow: hidden;
-            height: 0;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
+        a{
             text-decoration: none;
             color: black;
+            font-weight: bold;
+        }
+        #head {
+            width: 100%;
+            display: flex;
+            padding: 10px 0 20px 0;
+        }
+        .menubar{
+            margin: 0 auto;
+        }
+        .rogo{
+            font-size: 60px;
+            margin:0 50px 0 50px;
+        }
+        .menubar ul {
+            display: block;
+            /* margin-bottom: 50px; */
         }
 
-        .Menubar>li:hover {
-            transition-duration: 0.5s;
+        .menubar ul li {
+            position: relative;
+            display: inline-block;
+            margin: 0 20px 0 20px;
+            height: 40px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
         }
 
-        .Menubar>li:hover .Submenu {
-            height: 300px;
-            transition-duration: 1s;
+        .menubar ul li a {
+            font-size: 20px;
         }
 
-        .Menubar>li:hover .Menubar {
-            height: 500px;
-            transition-duration: 1s;
+        .menu li::after {
+            position: absolute;
+            content: "";
+            display: block;
+            border-bottom: 3px solid #000;
+            transition: all 250ms ease-out;
+            left: 50%;
+            right: 0;
+            width: 0;
+        }
+
+        .menu li:hover::after {
+            width: 100%;
+            left: 0;
+            right: auto;
         }
 
         .tp {
-            top: 300px;
+            top: 400px;
             left: 100px;
             animation-name: tp;
             animation-duration: 1s;
@@ -94,7 +74,7 @@
         }
 
         .md {
-            top: 400px;
+            top: 500px;
             left: 200px;
             animation-name: md;
             animation-duration: 1s;
@@ -104,7 +84,7 @@
         }
 
         .bt {
-            top: 500px;
+            top: 600px;
             left: 300px;
             animation-name: bt;
             animation-duration: 1s;
@@ -149,13 +129,6 @@
             }
         }
 
-        #body1 {
-            width: 100%;
-            height: 700px;
-            position: relative;
-        }
-
-
         .img {
             display: none;
             width: 100%;
@@ -178,39 +151,18 @@
 
 <body>
     <div>
-        <!-- <div id="head">
-            <div class="rogo">
-                <a href="../Project_1/index.html">VEGETARIAN</a>
+        <div id="head">
+            <div class="menubar">
+                <ul class="menu">
+                    <li><a href="../Project_1/compony.html">회사소개</a></li>
+                    <li><a href="../Project_1/compony.html">회사소개</a></li>
+                    <a class="rogo" href="../Project_1/index.html">VEGETARIAN</a>
+                    <li><a href="../Project_1/map.html">오시는길</a></li>
+                    <li><a href="../Project_1/cs.html">고객지원</a></li>
+                </ul>
             </div>
-        </div> -->
-        <div id="Middle">
-            <ul class="Menubar">
-                <li><a href="../Project_1/compony.html">회사소개</a>
-                    <ul class="Submenu">
-                        <li><a href="../Project_1/compony.html">회사소개</a></li>
-                        <li><a href="../Project_1/map.html">오시는길</a></li>
-                    </ul>
-                </li>
-                <!-- <li><a href="../Project_1/solution.html">이용방법</a>
-                    <ul class="Submenu">
-                        <li><a href="../Project_1/solution.html">이용방법</a></li>
-                    </ul>
-                </li>-->
-                <li class="rogo">
-                    <ul>
-                        <li><a href="../Project_1/index.html">VEGETARIAN</a></li>
-                    </ul>
-                </li>
-                <!--<li><a href="../Project_1/map.html">오시는길</a>
-                    <ul class="Submenu">
-                        <li><a href="../Project_1/map.html">다운로드</a></li>
-                    </ul>
-                </li> -->
-                <li><a href="../Project_1/cs.html">고객지원</a></li>
-            </ul>
-            </ul>
         </div>
-        <div id="body1">
+        <div id="body">
             <div class="imgfont tp">
                 지금까지
             </div>
@@ -223,9 +175,6 @@
             <img class="img" src="../Project_1/img/index1.jpg">
             <img class="img" src="../Project_1/img/index2.jpg">
             <img class="img" src="../Project_1/img/index3.jpg">
-        </div>
-        <div>
-            가장 신선한 일주일
         </div>
         <div>
 
