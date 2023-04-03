@@ -129,8 +129,8 @@
             <div class="menubar">
                 <ul class="menu">
                     <li><a href="../Project_1/compony.html">회사소개</a></li>
-                    <li><a href="../Project_1/compony.html">회사소개</a></li>
-                    <a class="rogo" href="../Project_1/index.html">VEGETARIAN</a>
+                    <li><a href="../Project_1/order.html">야일 SHOP</a></li>
+                    <a class="rogo" href="../Project_1/index.html">Yail</a>
                     <li><a href="../Project_1/map.html">오시는길</a></li>
                     <li><a href="../Project_1/cs.html">고객지원</a></li>
                 </ul>
@@ -148,7 +148,7 @@
                             minlength="3" maxlength="4"> - <input type="text" class="phonenumber" maxlength="4"><br>
                         <label class="tebleText">문의사항</label><br>
                         <input type="text" class="solutionbar"><br>
-                        <button type="submit">보내기</button>
+                        <button type="submit" class="submit">보내기</button>
                         <button type="reset">초기화</button>
                     </form>
                 </div>
@@ -217,6 +217,10 @@
                     panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
+        }
+        
+        document.querySelector(".submit").onclick = function(){
+            alert("접수가 완료되었습니다. 감사합니다")
         }
     </script>
 </body>

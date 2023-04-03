@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        #shopMain {
+            /* width: 1000px;
+            border: 1px solid black;
+            margin: auto; */
+            position: relative;
+            height: 100px;
+        }
+
+        .head {
+            height: 100px;
+            /* border: 1px solid black; */
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .menuBT {
+            position: relative;
+            width: 150px;
+            height: 100px;
+
+        }
+
+        .menuBT button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 50px;
+            background-color: skyblue;
+            color: white;
+            border: none;
+        }
+
+        .menuBT button:hover {
+            height: 1000px;
+        }
+
+        .rogo {
+            width: 200px;
+            height: 100px;
+            font-size: 30px;
+            position: relative;
+        }
+
+        .rogo a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .right {
+            width: 650px;
+            position: relative;
+        }
+
+        .SearchBar {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 450px;
+            height: 40px;
+            border: 3px solid skyblue;
+            display: flex;
+        }
+
+        .one,
+        .two,
+        .there {
+            height: 100%;
+            border: none;
+        }
+
+        .one {
+            width: 120px;
+            text-align: center;
+        }
+
+        .two {
+            width: 290px;
+        }
+
+        .there {
+            width: 40px;
+        }
+
+        .abc {
+            position: absolute;
+            top: 5%;
+            left: 70%;
+            font-size: 10px;
+            font-weight: 100;
+        }
+
+        .slide {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            /* position: absolute;
+            top: 13%; */
+        }
+
+        .slide img {
+            object-fit: cover;
+        }
+        .subslide{
+            width: 100px;
+            height: 50px;
+            overflow: hidden;
+            position: absolute;
+            top: 80%;
+        }
+        .subslide img{
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shopMain">
+        <div class="head">
+            <div class="menuBT">
+                <button>카테고리</button>
+            </div>
+            <div class="rogo">
+                <a href="../Project_1/order.html">yailShop</a>
+            </div>
+            <div class="right">
+                <div class="SearchBar">
+                    <select class="one"><!-- 나중에 li 버튼식으로 번경-->
+                        <option value="">전체</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                    </select>
+                    <input type="text" class="two">
+                    <button class="there"></button>
+                </div>
+                <div class="abc">
+                    <a href="../Project_1/index.html">공식홈페이지로</a> / <a href="">로그인</a> / <a href="">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="slide">
+            <img src="img/bananas-1119790_1920.jpg" alt="">
+        </div>
+        <div class="subslide">
+            <div><img src="../Project_1/img/blueberries-3460423_1920.jpg"></div>
+            <div><img src="../Project_1/img/cherries-1465801_1920.jpg"></div>
+            <div><img src="../Project_1/img/carrots-1508847_1920.jpg"></div>
+            <div><img src="../Project_1/img/cucumbers-849269_1920.jpg"></div>
+            <div><img src="../Project_1/img/peppers-499068_1920.jpg"></div>
+        </div>
+    </div>
+</body>
+
+</html>
