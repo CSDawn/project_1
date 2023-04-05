@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        #shopMain {
+            width: 1000px;
+            margin: auto;
+            position: relative;
+            height: 120px;
+        }
+
+        .head {
+            height: 100px;
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .headRogo {
+            width: 250px;
+            height: 100px;
+            font-size: 40px;
+            position: relative;
+            margin-right: 15px;
+        }
+
+        .headRogo a {
+            position: absolute;
+            color: skyblue;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 8px 20px 8px 20px;
+            border: 5px solid skyblue;
+            border-radius: 5%;
+        }
+
+        .headSearch {
+            width: 750px;
+            position: relative;
+        }
+
+        .SearchBar {
+            position: absolute;
+            top: 60%;
+            transform: translate(0, -60%);
+            width: 450px;
+            height: 40px;
+            border: 3px solid skyblue;
+            display: flex;
+        }
+
+        .SearchBar button {
+            background-color: white;
+            color: skyblue;
+            cursor: pointer
+        }
+
+        .headButton button {
+            position: relative;
+            top: 10%;
+            left: 65%;
+            border: none;
+            padding: 10px;
+            background-color: skyblue;
+            border-radius: 10%;
+            font-weight: bold;
+            color: white;
+        }
+
+        .headButton button:hover {
+            background-color: rgb(100, 165, 190);
+        }
+
+        .headButton span {
+            font-size: 50px;
+            color: white;
+        }
+
+        .one,
+        .two,
+        .there {
+            height: 100%;
+            border: none;
+        }
+
+        .one {
+            width: 120px;
+            text-align: center;
+        }
+
+        .two {
+            width: 290px;
+            padding-left: 10px;
+        }
+
+        .there {
+            width: 40px;
+        }
+
+        .rightCorner {
+            position: absolute;
+            top: 9%;
+            left: 3%;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .rightCorner button {
+            margin-right: 15px;
+            background-color: white;
+            border: none;
+            cursor: pointer
+        }
+
+        .container {}
+
+        .mySlides {}
+
+        .mySlides img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .row:after {
+            content: "";
+            /* display: */
+            /* clear: both; */
+        }
+
+        .row {
+            position: absolute;
+            display: flex;
+            top: 45%;
+            left: 13%;
+        }
+
+        .column {}
+
+        .demo {
+            width: 150px;
+            height: 50px;
+            object-fit: cover;
+            margin: 5px;
+            border: 3px solid white;
+        }
+
+        .active,
+        .demo:hover {
+            border: 3px solid black;
+        }
+        .logincontainer input[type=text],
+        .logincontainer input[type=password] {
+            width: 300px;
+            padding: 12px 20px;
+            margin-bottom: 5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .logincontainer button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin-bottom: 5px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        .logincontainer button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            height: 40px;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .logincontainer {
+            padding: 16px;
+            padding-left: 50px;
+        }
+
+        span.uname {
+            float: right;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+
+        span.psw {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            width: 400px;
+            height: 300px;
+        }
+
+        .close {
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+            position: relative;
+            left: 90%;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+        .signupcontainer input[type=text],
+        .signupcontainer input[type=password] {
+            width: 300px;
+            padding: 12px 20px;
+            margin-bottom: 5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .signupcontainer button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin-bottom: 5px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        .signupcontainer button:hover {
+            opacity: 0.8;
+        }
+
+        .imgcontainer {
+            height: 40px;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .signupcontainer {
+            padding: 16px;
+            padding-left: 50px;
+        }
+
+        span.uname {
+            float: right;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+
+        span.psw {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .signup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .signup-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            padding-top: 10px;
+            width: 400px;
+            height: 680px;
+        }
+
+        .signupanimate {
+            -webkit-animation: signupanimatezoom 0.6s;
+            animation: signupanimatezoom 0.6s
+        }
+
+        .signupInputList {
+            margin: 20px 0 20px 0;
+        }
+
+        .signupCheckList {
+            margin: 15px 0 15px 0;
+        }
+
+        .signupCheckList input {
+            margin-right: 10px;
+        }
+
+        @-webkit-keyframes signupanimatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes signupanimatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+
+
+        .dropCategories {
+            margin-top: 10px;
+            display: none;
+            position: relative;
+            left: 75%;
+            border: 1px solid rgb(220, 220, 220);
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        .dropCategories li a:hover {
+            color: skyblue;
+            text-decoration: underline;
+        }
+
+        .dropCategories li {
+            padding: 5px 0 5px 0;
+            list-style: none;
+            font-size: 13px;
+            text-align: center;
+
+            color: black;
+        }
+
+        .dropCategories li a {
+            padding: 0 5px 0 5px;
+        }
+        
+        .show {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="shopMain">
+        <div class="head">
+            <div class="headRogo">
+                <a href="../Project_1/order.html">YaliShop</a>
+            </div>
+            <div class="headSearch">
+                <div class="SearchBar">
+                    <select class="one"><!-- 나중에 li 버튼식으로 번경-->
+                        <option value="">전체</option>
+                        <option value="">야채 / 과일</option>
+                        <option value=""> 해 초 류 </option>
+                        <option value="">새 벽 쥬 스</option>
+                        <option value="">수 제 절 임</option>
+                        <option value="">냉 동 제 품</option>
+                    </select>
+                    <input type="text" class="two" placeholder="찾으시는 상품을 검색해주세요.">
+                    <button class="there"><span class="material-symbols-outlined">
+                            search
+                        </span></button>
+                </div>
+                <div class="headButton">
+                    <button><span class="material-symbols-outlined">
+                            add_circle
+                        </span><br>공백공백</button>
+                    <button><span class="material-symbols-outlined">
+                            local_shipping
+                        </span><br>정기배송</button>
+                    <span class="categories"><button><span class="material-symbols-outlined categoriesBt"
+                                onclick="myFunction()">
+                                menu
+                            </span><br>카테고리</button>
+                        <div id="myDropdown" class="dropCategories">
+                            <ul>
+                                <li>
+                                    <a href="">야채 / 과일</a>
+                                </li>
+                                <li>
+                                    <a href=""> 해 초 류 </a>
+                                </li>
+                                <li>
+                                    <a href="">새 벽 쥬 스</a>
+                                </li>
+                                <li>
+                                    <a href="">수 제 절 임</a>
+                                </li>
+                                <li>
+                                    <a href="">냉 동 제 품</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </span>
+                </div>
+                <div class="rightCorner">
+                    <button>
+                        <a href="../Project_1/index.html">공식홈페이지로</a>
+                    </button>
+                    <button onclick="document.getElementById('id01').style.display='block'">로그인</button>
+                    <button onclick="document.getElementById('signup').style.display='block'">회원가입</button>
+                    <button onclick="addbook()">즐겨찾기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+            </div>
+
+            <div class="logincontainer">
+                <input type="text" placeholder="아이디를 입력해주세요" name="uname" required>
+                <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+                <button type="submit">로그인</button><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> 아이디 자동저장
+                </label>
+            </div>
+            <span class="uname">아이디를 잊으셧나요? <a href="#">아이디 찾기</a></span>
+            <span class="psw">비밀번호를 잊으셧나요? <a href="#">비밀번호 찾기</a></span>
+            <div class="logincontainer" style="background-color:#f1f1f1">
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="signup">
+
+        <form class="signup-content signupanimate">
+
+            <div class="signupcontainer">
+                <div class="signupBox">
+                    <div class="signupInputList">
+                        <input type="text" placeholder="이름" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="text" placeholder="전화번호 ( - 없이 입력해주세요 )" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="text" placeholder="이메일주소를 입력해주세요" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="text" placeholder="아이디를 입력해주세요" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+                    </div>
+                </div>
+                <div class="signupBox">
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 만 14세 이상입니다
+                    </div>
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 전자금융거래 이용약관 동의
+                    </div>
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 개인정보 수집 밎 이용 동의
+                    </div>
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 개인정보 제3자 제공 동의
+                    </div>
+                </div>
+                <button type="submit">가입하기</button><br>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    var modal = document.getElementById('id01');
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var signup = document.getElementById('signup');
+
+    window.onclick = function (event) {
+        if (event.target == signup) {
+            signup.style.display = "none";
+        }
+    }
+    function addbook(url, title) {
+        window.external.AddFavorite("https://www.naver.com", 네이버);
+    }
+
+
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+    window.onclick = function (event) {
+        if (!event.target.matches('.categoriesBt')) {
+            var dropdowns = document.getElementsByClassName("dropCategories");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+</html>
