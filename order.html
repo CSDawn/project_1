@@ -23,7 +23,6 @@
 
         #shopMain {
             width: 1000px;
-            /* border: 1px solid black; */
             margin: auto;
             position: relative;
             height: 120px;
@@ -31,7 +30,6 @@
 
         .head {
             height: 100px;
-            /* border: 1px solid black; */
             display: flex;
             position: absolute;
             top: 50%;
@@ -44,6 +42,7 @@
             height: 100px;
             font-size: 40px;
             position: relative;
+            margin-right: 15px;
         }
 
         .headRogo a {
@@ -71,29 +70,30 @@
             border: 3px solid skyblue;
             display: flex;
         }
-        .SearchBar button{
+
+        .SearchBar button {
             background-color: white;
             color: skyblue;
-        }
-        .headButton {
-            position: relative;
-            top: 10%;
-            left: 65%;
+            cursor: pointer
         }
 
         .headButton button {
+            position: relative;
+            top: 10%;
+            left: 65%;
             border: none;
-            /* margin-right: 50px; */
             padding: 10px;
             background-color: skyblue;
-            border-radius:10%;
+            border-radius: 10%;
             font-weight: bold;
             color: white;
         }
-        .headButton button:hover{
+
+        .headButton button:hover {
             background-color: rgb(100, 165, 190);
         }
-        .headButton span{
+
+        .headButton span {
             font-size: 50px;
             color: white;
         }
@@ -112,6 +112,7 @@
 
         .two {
             width: 290px;
+            padding-left: 10px;
         }
 
         .there {
@@ -123,22 +124,23 @@
             top: 9%;
             left: 3%;
             font-size: 12px;
-            font-weight: 100;
+            font-weight: bold;
         }
 
-        .rightCorner a {
+        .rightCorner button {
             margin-right: 15px;
+            background-color: white;
+            border: none;
+            cursor: pointer
         }
 
-        .container {
-            position: relative;
-        }
+        .container {}
 
         .mySlides {}
 
         .mySlides img {
             width: 100%;
-            height: 500px;
+            height: 400px;
             object-fit: cover;
         }
 
@@ -148,14 +150,15 @@
 
         .row:after {
             content: "";
-            /* display:; */
+            /* display: */
             /* clear: both; */
         }
 
         .row {
             position: absolute;
-            top: 10%;
-            left: 75%;
+            display: flex;
+            top: 45%;
+            left: 13%;
         }
 
         .column {}
@@ -172,6 +175,355 @@
         .demo:hover {
             border: 3px solid black;
         }
+
+        .logincontainer input[type=text],
+        .logincontainer input[type=password] {
+            width: 300px;
+            padding: 12px 20px;
+            margin-bottom: 5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .logincontainer button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin-bottom: 5px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        .logincontainer button:hover {
+            opacity: 0.8;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .imgcontainer {
+            height: 40px;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .logincontainer {
+            padding: 16px;
+            padding-left: 50px;
+        }
+
+        span.uname {
+            float: right;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+
+        span.psw {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            width: 400px;
+            height: 300px;
+        }
+
+        .close {
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+            position: relative;
+            left: 90%;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+        .signupcontainer input[type=text],
+        .signupcontainer input[type=password] {
+            width: 300px;
+            padding: 12px 20px;
+            margin-bottom: 5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .signupcontainer button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin-bottom: 5px;
+            border: none;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        .signupcontainer button:hover {
+            opacity: 0.8;
+        }
+
+        .imgcontainer {
+            height: 40px;
+        }
+
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+        .signupcontainer {
+            padding: 16px;
+            padding-left: 50px;
+        }
+
+        span.uname {
+            float: right;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+
+        span.psw {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .signup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .signup-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            padding-top: 10px;
+            width: 400px;
+            height: 680px;
+        }
+
+        .signupanimate {
+            -webkit-animation: signupanimatezoom 0.6s;
+            animation: signupanimatezoom 0.6s
+        }
+
+        .signupInputList {
+            margin: 20px 0 20px 0;
+        }
+
+        .signupCheckList {
+            margin: 15px 0 15px 0;
+        }
+
+        .signupCheckList input {
+            margin-right: 10px;
+        }
+
+        @-webkit-keyframes signupanimatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes signupanimatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+
+
+        .dropCategories {
+            margin-top: 10px;
+            display: none;
+            position: relative;
+            left: 75%;
+            border: 1px solid rgb(220, 220, 220);
+            width: 150px;
+            height: 150px;
+            background-color: white;
+        }
+
+        .dropCategories li a:hover {
+            color: skyblue;
+            text-decoration: underline;
+        }
+
+        .dropCategories li {
+            padding: 5px 0 5px 0;
+            list-style: none;
+            font-size: 13px;
+            text-align: center;
+
+            color: black;
+        }
+
+        .dropCategories li a {
+            padding: 0 5px 0 5px;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .middle {
+            display: flex;
+            padding: 30px;
+        }
+        
+        .middleLeft {
+            width: 750px;
+            height: 340px;
+            display: flex;
+            /* border: 1px solid black; */
+        }
+        
+        .leftRecom {
+            margin: 10px;
+            width: 360px;
+            height: 320px;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+        
+        .leftRecom img {
+            width: 350px;
+            height: 310px;
+            object-fit: cover;
+            transition: all .2s linear;
+        }
+        
+        .leftRecom:hover {
+            border: 1px solid skyblue;
+        }
+        .leftRecom img:hover {
+            transform: scale(1.05)
+        }
+        
+        .middleRight {
+            width: 450px;
+            height: 340px;
+        }
+
+        .rightRecom {
+            margin: 20px 0px 0px 50px;
+            width: 380px;
+            height: 100px;
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+        }
+
+        .rightRecom img {
+            width: 370px;
+            height: 90px;
+            object-fit: cover;
+            transition: all .2s linear;
+        }
+        
+        .rightRecom:hover {
+            border: 1px solid skyblue;
+        }
+        .rightRecom img:hover {
+            transform: scale(1.05);
+        }
+
+        .middleTitle p{
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -179,34 +531,62 @@
     <div id="shopMain">
         <div class="head">
             <div class="headRogo">
-                <a href="../Project_1/order.html">YailShop</a>
+                <a href="../Project_1/order.html">YaliShop</a>
             </div>
             <div class="headSearch">
                 <div class="SearchBar">
                     <select class="one"><!-- 나중에 li 버튼식으로 번경-->
                         <option value="">전체</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
+                        <option value="">야채 / 과일</option>
+                        <option value=""> 해 초 류 </option>
+                        <option value="">새 벽 쥬 스</option>
+                        <option value="">수 제 절 임</option>
+                        <option value="">냉 동 제 품</option>
                     </select>
-                    <input type="text" class="two">
+                    <input type="text" class="two" placeholder="찾으시는 상품을 검색해주세요.">
                     <button class="there"><span class="material-symbols-outlined">
-                        search
+                            search
                         </span></button>
                 </div>
                 <div class="headButton">
                     <button><span class="material-symbols-outlined">
-                        add_circle
+                            add_circle
                         </span><br>공백공백</button>
                     <button><span class="material-symbols-outlined">
-                        local_shipping
+                            local_shipping
                         </span><br>정기배송</button>
-                    <button><span class="material-symbols-outlined">
-                        menu
-                        </span><br>카테고리</button>
+                    <span class="categories"><button><span class="material-symbols-outlined categoriesBt"
+                                onclick="myFunction()">
+                                menu
+                            </span><br>카테고리</button>
+                        <div id="myDropdown" class="dropCategories">
+                            <ul>
+                                <li>
+                                    <a href="">야채 / 과일</a>
+                                </li>
+                                <li>
+                                    <a href=""> 해 초 류 </a>
+                                </li>
+                                <li>
+                                    <a href="">새 벽 쥬 스</a>
+                                </li>
+                                <li>
+                                    <a href="">수 제 절 임</a>
+                                </li>
+                                <li>
+                                    <a href="">냉 동 제 품</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </span>
                 </div>
                 <div class="rightCorner">
-                    <a href="../Project_1/index.html">공식홈페이지로</a><a href="">로그인</a><a href="">회원가입</a><a href="">즐겨찾기</a>
+                    <button>
+                        <a href="../Project_1/index.html">공식홈페이지로</a>
+                    </button>
+                    <button onclick="document.getElementById('id01').style.display='block'">로그인</button>
+                    <button onclick="document.getElementById('signup').style.display='block'">회원가입</button>
+                    <button onclick="addbook()">즐겨찾기</button>
                 </div>
             </div>
         </div>
@@ -256,7 +636,86 @@
                 <img class="demo cursor" src="./img/cherries-1465801_1920.jpg" onclick="currentSlide(6)">
             </div>
         </div>
+    </div>
+    <div id="id01" class="modal">
 
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+            </div>
+
+            <div class="logincontainer">
+                <input type="text" placeholder="아이디를 입력해주세요" name="uname" required>
+                <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+                <button type="submit">로그인</button><br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> 아이디 자동저장
+                </label>
+            </div>
+            <span class="uname">아이디를 잊으셧나요? <a href="#">아이디 찾기</a></span>
+            <span class="psw">비밀번호를 잊으셧나요? <a href="#">비밀번호 찾기</a></span>
+            <div class="logincontainer" style="background-color:#f1f1f1">
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="signup">
+
+        <form class="signup-content signupanimate">
+
+            <div class="signupcontainer">
+                <div class="signupBox">
+                    <div class="signupInputList">
+                        <input type="text" placeholder="이름" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="text" placeholder="전화번호 ( - 없이 입력해주세요 )" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="text" placeholder="이메일주소를 입력해주세요" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="text" placeholder="아이디를 입력해주세요" name="uname" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+                    </div>
+                    <div class="signupInputList">
+                        <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+                    </div>
+                </div>
+                <div class="signupBox">
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 만 14세 이상입니다
+                    </div>
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 전자금융거래 이용약관 동의
+                    </div>
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 개인정보 수집 밎 이용 동의
+                    </div>
+                    <div class="signupCheckList">
+                        <input type="checkbox">[필수] 개인정보 제3자 제공 동의
+                    </div>
+                </div>
+                <button type="submit">가입하기</button><br>
+            </div>
+        </form>
+    </div>
+    <div class="middle">
+        <div class=" middleTitle"><p>이번주 가장 많이 팔린 상품이에요</p>
+            <div class="middleLeft">
+                <div class="leftRecom"><img src="./img/comidian,2019.jpg" alt=""></div>
+                <div class="leftRecom"><img src="./img/comidian,2019.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class=" middleTitle"><p>이건 어때요?</p>
+            <div class="middleRight">
+                <div class="rightRecom"><img src="./img/comidian,2019.jpg" alt=""></div>
+                <div class="rightRecom"><img src="./img/comidian,2019.jpg" alt=""></div>
+                <div class="rightRecom"><img src="./img/comidian,2019.jpg" alt=""></div>
+            </div>
+        </div>
     </div>
     <script>
 
@@ -288,6 +747,40 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
+        }
+        var modal = document.getElementById('id01');
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var signup = document.getElementById('signup');
+
+        window.onclick = function (event) {
+            if (event.target == signup) {
+                signup.style.display = "none";
+            }
+        }
+        function addbook(url, title) {
+            window.external.AddFavorite("https://www.naver.com", 네이버);
+        }
+
+
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.categoriesBt')) {
+                var dropdowns = document.getElementsByClassName("dropCategories");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
         }
     </script>
 </body>
